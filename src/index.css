@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.sidebar_scroll::-webkit-scrollbar {
+  width: 3px;
+  display: none;
+}
+
+.sidebar_scroll::-webkit-scrollbar-track {
+  background: #faf9f9;
+}
+
+/* Handle */
+.sidebar_scroll::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.sidebar_scroll::-webkit-scrollbar-thumb:hover {
+  background: #60a5fa;
+}
+
+.loader {
+  display: flex;
+  justify-content: space-between;
+  width: 64px;
+}
+
+.loader div {
+  width: 12px;
+  height: 12px;
+  background-color: #3498db;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.loader div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  to {
+    opacity: 0.3;
+    transform: translateY(-20px);
+  }
+}
+
+.ribbon::after,
+.ribbon::before {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  display: block;
+  border: 7px solid #e99a32;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+
+.ribbon::before{
+  top: -6px;
+  right: 17px;
+}
+
+.ribbon::after{
+  bottom: 17px;
+  left: -6px;
+}
+
+.hide-spinner::-webkit-inner-spin-button,
+.hide-spinner::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.hide-spinner {
+  -moz-appearance: textfield; 
+  appearance: textfield;
+}
+
+
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
+
+
